@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "82be02c8-8289-44f2-9894-45041018c793",
+		"name": "myTinerary",
+		"description": "Prueba de endpoinds del back end my Tinerary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39830214"
+	},
+	"item": [
+		{
+			"name": "cities",
+			"item": [
+				{
+					"name": "allCities",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "cityById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cities/id/67dbb7c1a478cf3da85bf092",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cities",
+								"id",
+								"67dbb7c1a478cf3da85bf092"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"name\": \"Bangkok\",\r\n      \"country\": \"Thailand\",\r\n      \"continent\": \"Asia\",\r\n      \"description\": \"A bustling metropolis famous for its street life, temples, and vibrant markets.\",\r\n      \"image\": \"https://upload.wikimedia.org/wikipedia/commons/6/6b/Bangkok_skyline.jpg\",\r\n      \"currency\": \"Thai Baht (THB)\",\r\n      \"language\": \"Thai\",\r\n      \"population\": 10539000,\r\n      \"climate\": \"Tropical savanna\",\r\n      \"naturalAttractions\": [\"Chao Phraya River\", \"Lumphini Park\"],\r\n      \"visaRequirement\": false,\r\n      \"publicTransport\": [\"BTS Skytrain\", \"MRT Subway\", \"Buses\"],\r\n      \"timezone\": \"UTC+7\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cities/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cities",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n      \"name\": \"Beijing\",\r\n      \"country\": \"China\",\r\n      \"continent\": \"Asia\",\r\n      \"description\": \"The capital of China, known for its historical sites like the Great Wall and Forbidden City.\",\r\n      \"image\": \"https://upload.wikimedia.org/wikipedia/commons/3/3a/Beijing_skyline.jpg\",\r\n      \"currency\": \"Chinese Yuan (CNY)\",\r\n      \"language\": \"Mandarin Chinese\",\r\n      \"population\": 21540000,\r\n      \"climate\": \"Humid continental\",\r\n      \"naturalAttractions\": [\"Fragrant Hills\", \"Ming Tombs\"],\r\n      \"visaRequirement\": true,\r\n      \"publicTransport\": [\"Subway\", \"Buses\", \"Taxis\"],\r\n      \"timezone\": \"UTC+8\"\r\n    },\r\n    {\r\n      \"name\": \"Jakarta\",\r\n      \"country\": \"Indonesia\",\r\n      \"continent\": \"Asia\",\r\n      \"description\": \"The capital of Indonesia, a bustling city with diverse culture and a rich history.\",\r\n      \"image\": \"https://upload.wikimedia.org/wikipedia/commons/2/2f/Jakarta_skyline.jpg\",\r\n      \"currency\": \"Indonesian Rupiah (IDR)\",\r\n      \"language\": \"Indonesian\",\r\n      \"population\": 10850000,\r\n      \"climate\": \"Tropical rainforest\",\r\n      \"naturalAttractions\": [\"Thousand Islands\", \"Ancol Beach\"],\r\n      \"visaRequirement\": false,\r\n      \"publicTransport\": [\"MRT\", \"Buses\", \"Taxis\"],\r\n      \"timezone\": \"UTC+7\"\r\n    }\r\n  ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cities/insertMany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cities",
+								"insertMany"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
