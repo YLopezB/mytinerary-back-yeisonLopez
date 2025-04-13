@@ -14,7 +14,20 @@
 					"name": "allCities",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cities/allCities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cities",
+								"allCities"
+							]
+						}
 					},
 					"response": []
 				},
@@ -24,7 +37,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/cities/id/67dbb7c1a478cf3da85bf092",
+							"raw": "http://localhost:8080/api/cities/id/67f50dbf4f1054ea0a44332c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -34,7 +47,7 @@
 								"api",
 								"cities",
 								"id",
-								"67dbb7c1a478cf3da85bf092"
+								"67f50dbf4f1054ea0a44332c"
 							]
 						}
 					},
@@ -95,6 +108,197 @@
 								"api",
 								"cities",
 								"insertMany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"_id\": \"67f50dbf4f1054ea0a44332c\",\r\n        \"name\": \"Jakarta\",\r\n        \"country\": \"Indonesia\",\r\n        \"continent\": \"Asia\",\r\n        \"description\": \"The capital of Indonesia, a bustling city with diverse culture and a rich history.\",\r\n        \"image\": \"https://nowjakarta.co.id/uploads/ckeditor/pictures/4473/content_14355691070_a5a51fc4fb_b.jpg\",\r\n        \"currency\": \"Indonesian Rupiah (IDR)\",\r\n        \"language\": \"Indonesian\",\r\n        \"population\": 10850000,\r\n        \"climate\": \"Tropical rainforest\",\r\n        \"naturalAttractions\": [\r\n            \"Thousand Islands\",\r\n            \"Ancol Beach\"\r\n        ],\r\n        \"visaRequirement\": false,\r\n        \"publicTransport\": [\r\n            \"MRT\",\r\n            \"Buses\",\r\n            \"Taxis\"\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cities/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cities",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cities/delete/67fc1d59d982925a59301f17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cities",
+								"delete",
+								"67fc1d59d982925a59301f17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "itineraries",
+			"item": [
+				{
+					"name": "allItineraries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/itineraries/allItineraries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"itineraries",
+								"allItineraries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "itineraryByCity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/itineraries/itineraryByCity/67dbb7c1a478cf3da85bf092",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"itineraries",
+								"itineraryByCity",
+								"67dbb7c1a478cf3da85bf092"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createItinerary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"city\": \"67dbb7c1a478cf3da85bf092\",\r\n      \"name\": \"Liberty Statue\",\r\n      \"photo\": \"https://static.vecteezy.com/system/resources/previews/001/416/130/original/statue-of-liberty-with-blue-sky-free-photo.jpeg\",\r\n      \"userName\": \"Yeison Lopez\",\r\n      \"userPhoto\": \"https://wallpapers.com/images/hd/roddyricch-actuando-en-vivo-en-el-escenario-zspdey22so2vh939.jpg\", \r\n      \"price\": 5.50,\r\n      \"duration\": 3.60,\r\n      \"likes\": 1,\r\n      \"hashtags\": [\"#meGusta\", \"#loquiero\", \"#voyAir\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/itineraries/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"itineraries",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateItinerary",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"_id\": \"67fc1db5d982925a59301f1c\",\r\n            \"city\": \"67dbb7c1a478cf3da85bf092\",\r\n            \"name\": \"Central park\",\r\n            \"photo\": \"http://4.bp.blogspot.com/-EITP5vgK8yw/UOvEAgc4VKI/AAAAAAAAB_k/ypiY1hXMJOo/s1600/Snowfall+Central+Park+New+York.jpg\",\r\n            \"userName\": \"Yeison Lopez\",\r\n            \"userPhoto\": \"https://wallpapers.com/images/hd/roddyricch-actuando-en-vivo-en-el-escenario-zspdey22so2vh939.jpg\",\r\n            \"price\": 5.5,\r\n            \"duration\": 3.6,\r\n            \"likes\": 1,\r\n            \"hashtags\": [\r\n                \"#meGusta\",\r\n                \"#loquiero\",\r\n                \"#voyAir\"\r\n            ]\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/itineraries/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"itineraries",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/itineraries/delete/67fc1db5d982925a59301f1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"itineraries",
+								"delete",
+								"67fc1db5d982925a59301f1c"
 							]
 						}
 					},
