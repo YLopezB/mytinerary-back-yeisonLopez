@@ -1,9 +1,19 @@
 import Itinerary from "../../models/Itinerary.js"
-import "../../models/City.js"
 
 let allItineraries = async (request, response, next) => {
     try {
-        let all = await Itinerary.find()
+        let {id, city, name} = request.query
+        let query = {}
+        if (id) {
+            query._id = id
+        }
+        if (city) {
+            query.city = city
+        }
+        if (name) {
+            query.name = {$regex: name, $options: 'i'}
+        }
+        let all = await Itinerary.find(query)
         return response.status(200).json({
             response: all
         })

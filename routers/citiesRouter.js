@@ -3,6 +3,7 @@ import {allCities, cityById} from "../controllers/cities/read.js";
 import {createCity, createManyCities} from "../controllers/cities/create.js";
 import { update } from "../controllers/cities/update.js";
 import { deleteCity } from "../controllers/cities/delete.js";
+import passsport from "../middlewares/passport.js";
 
 const citiesRouter = Router();
 

@@ -2,8 +2,7 @@ import { Schema, model } from "mongoose";
 
 let collection = "itineraries";
 let schema = Schema({
-    city: {type: Schema.Types.ObjectId,ref:"cities", required:true,
-      },
+      city: {type: Schema.Types.ObjectId,ref:"cities", required:true},
       name: {type: String, required: true },
       photo: {type: String, required: true },
       userName: {type: String, required: true },

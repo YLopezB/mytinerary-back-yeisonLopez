@@ -3,6 +3,7 @@ import {allItineraries, itineraryById, itineraryByCity} from "../controllers/iti
 import { createItinerary, createManyItineraries } from "../controllers/itineraries/create.js";
 import { update } from "../controllers/itineraries/update.js";
 import { deleteItinerary } from "../controllers/itineraries/delete.js";
+import passport from "../middlewares/passport.js";
 
 
 const itinerariesRouter = Router();
@@ -15,4 +16,5 @@ itinerariesRouter.post("/insertMany", createManyItineraries);
 itinerariesRouter.put("/update", update)
 itinerariesRouter.delete("/delete/:idParams", deleteItinerary)
 
+//passport.authenticate('jwt', {session: false}),
 export default itinerariesRouter;
